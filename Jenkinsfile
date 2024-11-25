@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage(‘git’) {
           agent {
-            label "K8S_Master"
+            label "localhost"
            }
            steps {
              script {
