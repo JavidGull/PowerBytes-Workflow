@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage(‘git’) {
           agent {
-            label "Built-In Node"
+            label "Built-In"
            }
            steps {
              script {
