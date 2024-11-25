@@ -1,14 +1,16 @@
 pipeline {
-  agent {label "linux"}
-  options {
-    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', days ToKeepStr: '', numToKeepStr: '5')
-    disableConcurrentBuilds()
-   }
-   stages {
-     stage('Hello'){
-       steps {
-         echo "hello"
-        }		 
-      }	
-    } 
+    agent none
+    stages {
+        stage(‘git’) {
+          agent {
+            label "K8S_Master"
+           }
+           steps {
+             script {
+                git 'https://github.com/JavidGull/devop_capstone_project02.git'
+              }    
+            }
+        }
+     }
 }
+
