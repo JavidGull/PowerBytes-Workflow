@@ -1,14 +1,12 @@
 pipeline {
     agent none
     stages {
-        stage(‘git’) {
+        stage(‘build’) {
           agent {
-            label "Built-In"
+            label "Develop"
            }
            steps {
-             script {
-                git 'https://github.com/JavidGull/devop_capstone_project02.git'
-              }    
+             sh 'echo test for develop branch' 
             }
         }
      }
