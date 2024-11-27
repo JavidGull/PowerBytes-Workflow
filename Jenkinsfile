@@ -6,8 +6,8 @@ pipeline {
             label "Production"
            }
            steps {
-             sh docker build dockerfile -t PB_WorkfLow_image
-             sh docker run --name apache_ubuntu -p 82:80 -d PB_WorkfLow_image                          
+             sh 'sudo docker build dockerfile -t PB_WorkfLow_image'
+             sh 'sudo docker run --name apache_ubuntu -p 82:80 -d PB_WorkfLow_image'                          
             }
         }
      }
