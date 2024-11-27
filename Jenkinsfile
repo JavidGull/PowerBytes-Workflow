@@ -4,7 +4,7 @@ pipeline {
         stage(‘git’) {
           agent { label "Develop"}
             steps {
-              sh 'To build the code only.. '
+              echo 'to build the code..             
             }
         }
      }
