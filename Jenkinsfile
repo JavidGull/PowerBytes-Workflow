@@ -6,7 +6,10 @@ pipeline {
             label "Develop"
            }
            steps {
-             sh 'echo test for develop branch' 
+             sh '''
+              docker build dockerfile -t PB_WorkfLow_image
+              docker run --name apache_ubuntu -p 82:80 -d PB_WorkfLow_image
+             '''               
             }
         }
      }
