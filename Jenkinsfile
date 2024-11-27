@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        stage(‘Deploy’) {
+        stage('Deploy') {
           agent {
             label "Production"
            }
