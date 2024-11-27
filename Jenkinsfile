@@ -1,9 +1,9 @@
 pipeline {
     agent none
     stages {
-        stage(‘build’) {
+        stage(‘Deploy’) {
           agent {
-            label "Develop"
+            label "Production"
            }
            steps {
              sh '''
