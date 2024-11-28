@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy') {
           agent {
-            label "Production"
+            label "Jenkins_Production"
            }
            steps {
              sh 'sudo docker build . -t pb_workflow_image'
